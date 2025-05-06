@@ -45,6 +45,7 @@ export function Welcome() {
     </main>
   );
 }
+``;
 
 const resources = [
   {
