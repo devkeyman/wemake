@@ -9,7 +9,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "./ui/navigation-menu";
-import { cn } from "~/lib/utils";
+import { cn } from "@/lib/utils";
 import {
   BellIcon,
   LogOutIcon,
