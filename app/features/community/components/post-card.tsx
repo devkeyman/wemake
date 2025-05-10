@@ -33,21 +33,19 @@ export function PostCard({
     <Link to={`/community/${id}`}>
       <Card className="bg-transparent hover:bg-card/50 transition-colors">
         <CardHeader className="flex flex-row items-center gap-2">
-          <Link to={`/community/${id}`}>
-            <Avatar className="size-14 mr-2">
-              <AvatarFallback>{author}</AvatarFallback>
-              {authorAvatarUrl && <AvatarImage src={authorAvatarUrl} />}
-            </Avatar>
-            <div className="space-y-2">
-              <CardTitle>{title}</CardTitle>
-              <div className="flex flex-row gap-2 text-sm leading-tight text-muted-foreground">
-                <span>{author} on</span>
-                <span>{category}</span>
-                <span>・</span>
-                <span>{postedAt}</span>
-              </div>
+          <Avatar className="size-14 mr-2">
+            <AvatarFallback>{author}</AvatarFallback>
+            {authorAvatarUrl && <AvatarImage src={authorAvatarUrl} />}
+          </Avatar>
+          <div className="space-y-2">
+            <CardTitle>{title}</CardTitle>
+            <div className="flex flex-row gap-2 text-sm leading-tight text-muted-foreground">
+              <span>{author} on</span>
+              <span>{category}</span>
+              <span>・</span>
+              <span>{postedAt}</span>
             </div>
-          </Link>
+          </div>
         </CardHeader>
         <CardFooter className="flex justify-end">
           <Button variant={"link"} asChild>
