@@ -14,6 +14,7 @@ import { DotIcon, EyeIcon, HeartIcon } from "lucide-react";
 import { IdeaCard } from "@/features/ideas/components/idea-card";
 import { Badge } from "@/common/components/ui/badge";
 import { JobCard } from "@/features/jobs/components/job-card";
+import { TeamCard } from "@/features/teams/components/team-card";
 
 export const meta: MetaFunction = () => {
   return [
@@ -124,6 +125,35 @@ export default function HomePage() {
               min: 100000,
               max: 120000,
             }}
+          />
+        ))}
+      </div>
+      <div className="grid grid-cols-4 gap-4">
+        <div>
+          <h2 className="text-5xl font-bold leading-tight tracking-tight">
+            Find a team mate.
+          </h2>
+          <p className="text-xl font-light text-foreground">
+            Find your dream job.
+          </p>
+          <Button className="text-lg p-0" asChild variant="link">
+            <Link to="/teams">Explore all teams &rarr;</Link>
+          </Button>
+        </div>
+        {Array.from({ length: 10 }).map((_, index) => (
+          <TeamCard
+            key={`teamId-${index}`}
+            id={`teamId-${index}`}
+            leader={{
+              username: "lynn",
+              avatarUrl: "https://github.com/inthetiger.png",
+            }}
+            positions={[
+              "React Developer",
+              "Backend Developer",
+              "Product Developer",
+            ]}
+            projectDescription="a new social media platform."
           />
         ))}
       </div>
