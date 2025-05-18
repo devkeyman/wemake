@@ -15,27 +15,21 @@ import { IdeaCard } from "@/features/ideas/components/idea-card";
 import { Badge } from "@/common/components/ui/badge";
 import { JobCard } from "@/features/jobs/components/job-card";
 import { TeamCard } from "@/features/teams/components/team-card";
-import type { Route } from "@/types";
 
-export function meta(): Route.MetaFunction {
-  return [
+export function meta(): MetaFunction {
+  return () => [
     { title: "Home | WeMake" },
     { name: "description", content: "Discover and share amazing products" },
   ];
 }
 
-export function loader({ request }: Route.LoaderArgs) {
-  return {};
+export function loader() {
+  return {
+    hello: "world",
+  };
 }
 
-export function action({ request }: Route.ActionArgs) {
-  return {};
-}
-
-export default function HomePage({
-  loaderData,
-  actionData,
-}: Route.ComponentProps) {
+export default function HomePage({ loaderData }: { loaderData: any }) {
   return (
     <main className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-bold mb-6">Welcome to WeMake</h1>
